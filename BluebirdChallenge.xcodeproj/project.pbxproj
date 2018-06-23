@@ -22,6 +22,7 @@
 		5365EC7A20DDE62300AA61AD /* MovieDBEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC7920DDE62300AA61AD /* MovieDBEnvironment.swift */; };
 		5365EC7C20DDE78300AA61AD /* MovieRequet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC7B20DDE78300AA61AD /* MovieRequet.swift */; };
 		5365EC7E20DDE79C00AA61AD /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC7D20DDE79C00AA61AD /* ImageRequest.swift */; };
+		5365EC8120DEC40600AA61AD /* URLSessionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC8020DEC40600AA61AD /* URLSessionDispatcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		5365EC7920DDE62300AA61AD /* MovieDBEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBEnvironment.swift; sourceTree = "<group>"; };
 		5365EC7B20DDE78300AA61AD /* MovieRequet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRequet.swift; sourceTree = "<group>"; };
 		5365EC7D20DDE79C00AA61AD /* ImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRequest.swift; sourceTree = "<group>"; };
+		5365EC8020DEC40600AA61AD /* URLSessionDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDispatcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		5365EC6A20DDD9F700AA61AD /* Network Layer */ = {
 			isa = PBXGroup;
 			children = (
+				5365EC7F20DEC3B400AA61AD /* Dispatcher */,
 				5365EC6D20DDDA6E00AA61AD /* Environment */,
 				5365EC6E20DDDA7400AA61AD /* Requests */,
 				5365EC6B20DDDA1B00AA61AD /* Framework */,
@@ -177,6 +180,14 @@
 				5365EC7D20DDE79C00AA61AD /* ImageRequest.swift */,
 			);
 			path = Requests;
+			sourceTree = "<group>";
+		};
+		5365EC7F20DEC3B400AA61AD /* Dispatcher */ = {
+			isa = PBXGroup;
+			children = (
+				5365EC8020DEC40600AA61AD /* URLSessionDispatcher.swift */,
+			);
+			path = Dispatcher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +302,7 @@
 				5365EC7220DDDCF500AA61AD /* NetworkDispatcher.swift in Sources */,
 				5365EC7420DDDD2B00AA61AD /* NetworkEnvironment.swift in Sources */,
 				5365EC4520DDD81500AA61AD /* AppDelegate.swift in Sources */,
+				5365EC8120DEC40600AA61AD /* URLSessionDispatcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

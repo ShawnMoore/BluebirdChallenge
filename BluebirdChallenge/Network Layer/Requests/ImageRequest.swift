@@ -17,4 +17,11 @@ enum ImageRequest: NetworkRequest {
             return "t/p/w600_and_h900_bestv2/" + path
         }
     }
+    
+    var identifier: String? {
+        switch self {
+        case .retrieveImage(let path):
+            return "ImageRequest." + path
+        }
+    }
 }
