@@ -14,6 +14,11 @@
 		5365EC4F20DDD81600AA61AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5365EC4E20DDD81600AA61AD /* Assets.xcassets */; };
 		5365EC5220DDD81600AA61AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5365EC5020DDD81600AA61AD /* LaunchScreen.storyboard */; };
 		5365EC5D20DDD81600AA61AD /* BluebirdChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC5C20DDD81600AA61AD /* BluebirdChallengeTests.swift */; };
+		5365EC7020DDDB6800AA61AD /* URLRequestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC6F20DDDB6800AA61AD /* URLRequestExtensions.swift */; };
+		5365EC7220DDDCF500AA61AD /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC7120DDDCF500AA61AD /* NetworkDispatcher.swift */; };
+		5365EC7420DDDD2B00AA61AD /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC7320DDDD2B00AA61AD /* NetworkEnvironment.swift */; };
+		5365EC7620DDDDA600AA61AD /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC7520DDDDA600AA61AD /* NetworkRequest.swift */; };
+		5365EC7820DDE09300AA61AD /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC7720DDE09300AA61AD /* NetworkError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,11 @@
 		5365EC5820DDD81600AA61AD /* BluebirdChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluebirdChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5365EC5C20DDD81600AA61AD /* BluebirdChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluebirdChallengeTests.swift; sourceTree = "<group>"; };
 		5365EC5E20DDD81600AA61AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5365EC6F20DDDB6800AA61AD /* URLRequestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestExtensions.swift; sourceTree = "<group>"; };
+		5365EC7120DDDCF500AA61AD /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
+		5365EC7320DDDD2B00AA61AD /* NetworkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnvironment.swift; sourceTree = "<group>"; };
+		5365EC7520DDDDA600AA61AD /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		5365EC7720DDE09300AA61AD /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +89,12 @@
 		5365EC4320DDD81500AA61AD /* BluebirdChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				5365EC4420DDD81500AA61AD /* AppDelegate.swift */,
 				5365EC4620DDD81500AA61AD /* ViewController.swift */,
 				5365EC4820DDD81600AA61AD /* Main.storyboard */,
-				5365EC4E20DDD81600AA61AD /* Assets.xcassets */,
-				5365EC5020DDD81600AA61AD /* LaunchScreen.storyboard */,
-				5365EC5320DDD81600AA61AD /* Info.plist */,
-				5365EC4B20DDD81600AA61AD /* BluebirdChallenge.xcdatamodeld */,
+				5365EC6A20DDD9F700AA61AD /* Network Layer */,
+				5365EC6720DDD85500AA61AD /* Model */,
+				5365EC6C20DDDA4000AA61AD /* Extensions */,
+				5365EC6820DDD8F300AA61AD /* Miscellaneous */,
 			);
 			path = BluebirdChallenge;
 			sourceTree = "<group>";
@@ -97,6 +106,68 @@
 				5365EC5E20DDD81600AA61AD /* Info.plist */,
 			);
 			path = BluebirdChallengeTests;
+			sourceTree = "<group>";
+		};
+		5365EC6720DDD85500AA61AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5365EC4B20DDD81600AA61AD /* BluebirdChallenge.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5365EC6820DDD8F300AA61AD /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				5365EC4420DDD81500AA61AD /* AppDelegate.swift */,
+				5365EC4E20DDD81600AA61AD /* Assets.xcassets */,
+				5365EC5020DDD81600AA61AD /* LaunchScreen.storyboard */,
+				5365EC5320DDD81600AA61AD /* Info.plist */,
+			);
+			path = Miscellaneous;
+			sourceTree = "<group>";
+		};
+		5365EC6A20DDD9F700AA61AD /* Network Layer */ = {
+			isa = PBXGroup;
+			children = (
+				5365EC6D20DDDA6E00AA61AD /* Environment */,
+				5365EC6E20DDDA7400AA61AD /* Requests */,
+				5365EC6B20DDDA1B00AA61AD /* Framework */,
+			);
+			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		5365EC6B20DDDA1B00AA61AD /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				5365EC7120DDDCF500AA61AD /* NetworkDispatcher.swift */,
+				5365EC7720DDE09300AA61AD /* NetworkError.swift */,
+				5365EC7320DDDD2B00AA61AD /* NetworkEnvironment.swift */,
+				5365EC7520DDDDA600AA61AD /* NetworkRequest.swift */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		5365EC6C20DDDA4000AA61AD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5365EC6F20DDDB6800AA61AD /* URLRequestExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5365EC6D20DDDA6E00AA61AD /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		5365EC6E20DDDA7400AA61AD /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,8 +271,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5365EC7620DDDDA600AA61AD /* NetworkRequest.swift in Sources */,
+				5365EC7820DDE09300AA61AD /* NetworkError.swift in Sources */,
 				5365EC4720DDD81500AA61AD /* ViewController.swift in Sources */,
+				5365EC7020DDDB6800AA61AD /* URLRequestExtensions.swift in Sources */,
 				5365EC4D20DDD81600AA61AD /* BluebirdChallenge.xcdatamodeld in Sources */,
+				5365EC7220DDDCF500AA61AD /* NetworkDispatcher.swift in Sources */,
+				5365EC7420DDDD2B00AA61AD /* NetworkEnvironment.swift in Sources */,
 				5365EC4520DDD81500AA61AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,7 +440,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59B8VY99KD;
-				INFOPLIST_FILE = BluebirdChallenge/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BluebirdChallenge/Miscellaneous/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -382,7 +458,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59B8VY99KD;
-				INFOPLIST_FILE = BluebirdChallenge/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BluebirdChallenge/Miscellaneous/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
