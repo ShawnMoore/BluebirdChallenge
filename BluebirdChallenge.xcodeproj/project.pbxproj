@@ -27,6 +27,7 @@
 		5365EC8420DEDB2A00AA61AD /* MovieListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC8320DEDB2A00AA61AD /* MovieListResponse.swift */; };
 		53819F9920DEF0640018522F /* DateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53819F9820DEF0640018522F /* DateUtility.swift */; };
 		53819F9B20DEF1EB0018522F /* JSONDecoderUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53819F9A20DEF1EB0018522F /* JSONDecoderUtility.swift */; };
+		53819F9D20DEFCEC0018522F /* GenreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53819F9C20DEFCEC0018522F /* GenreResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		5365EC8320DEDB2A00AA61AD /* MovieListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListResponse.swift; sourceTree = "<group>"; };
 		53819F9820DEF0640018522F /* DateUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtility.swift; sourceTree = "<group>"; };
 		53819F9A20DEF1EB0018522F /* JSONDecoderUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderUtility.swift; sourceTree = "<group>"; };
+		53819F9C20DEFCEC0018522F /* GenreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 			children = (
 				5365EC8320DEDB2A00AA61AD /* MovieListResponse.swift */,
 				5309BEED20DEDDBD00097EAA /* MovieResponse.swift */,
+				53819F9C20DEFCEC0018522F /* GenreResponse.swift */,
 			);
 			path = "Value Objects";
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				5365EC7020DDDB6800AA61AD /* URLRequestExtensions.swift in Sources */,
 				53819F9B20DEF1EB0018522F /* JSONDecoderUtility.swift in Sources */,
 				5309BEEE20DEDDBD00097EAA /* MovieResponse.swift in Sources */,
+				53819F9D20DEFCEC0018522F /* GenreResponse.swift in Sources */,
 				5365EC7A20DDE62300AA61AD /* MovieDBEnvironment.swift in Sources */,
 				5365EC4D20DDD81600AA61AD /* BluebirdChallenge.xcdatamodeld in Sources */,
 				53819F9920DEF0640018522F /* DateUtility.swift in Sources */,
