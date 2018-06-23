@@ -19,6 +19,9 @@
 		5365EC7420DDDD2B00AA61AD /* NetworkEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC7320DDDD2B00AA61AD /* NetworkEnvironment.swift */; };
 		5365EC7620DDDDA600AA61AD /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC7520DDDDA600AA61AD /* NetworkRequest.swift */; };
 		5365EC7820DDE09300AA61AD /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC7720DDE09300AA61AD /* NetworkError.swift */; };
+		5365EC7A20DDE62300AA61AD /* MovieDBEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC7920DDE62300AA61AD /* MovieDBEnvironment.swift */; };
+		5365EC7C20DDE78300AA61AD /* MovieRequet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC7B20DDE78300AA61AD /* MovieRequet.swift */; };
+		5365EC7E20DDE79C00AA61AD /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC7D20DDE79C00AA61AD /* ImageRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		5365EC7320DDDD2B00AA61AD /* NetworkEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEnvironment.swift; sourceTree = "<group>"; };
 		5365EC7520DDDDA600AA61AD /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		5365EC7720DDE09300AA61AD /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		5365EC7920DDE62300AA61AD /* MovieDBEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBEnvironment.swift; sourceTree = "<group>"; };
+		5365EC7B20DDE78300AA61AD /* MovieRequet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRequet.swift; sourceTree = "<group>"; };
+		5365EC7D20DDE79C00AA61AD /* ImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +165,7 @@
 		5365EC6D20DDDA6E00AA61AD /* Environment */ = {
 			isa = PBXGroup;
 			children = (
+				5365EC7920DDE62300AA61AD /* MovieDBEnvironment.swift */,
 			);
 			path = Environment;
 			sourceTree = "<group>";
@@ -166,6 +173,8 @@
 		5365EC6E20DDDA7400AA61AD /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				5365EC7B20DDE78300AA61AD /* MovieRequet.swift */,
+				5365EC7D20DDE79C00AA61AD /* ImageRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -272,9 +281,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5365EC7620DDDDA600AA61AD /* NetworkRequest.swift in Sources */,
+				5365EC7E20DDE79C00AA61AD /* ImageRequest.swift in Sources */,
 				5365EC7820DDE09300AA61AD /* NetworkError.swift in Sources */,
+				5365EC7C20DDE78300AA61AD /* MovieRequet.swift in Sources */,
 				5365EC4720DDD81500AA61AD /* ViewController.swift in Sources */,
 				5365EC7020DDDB6800AA61AD /* URLRequestExtensions.swift in Sources */,
+				5365EC7A20DDE62300AA61AD /* MovieDBEnvironment.swift in Sources */,
 				5365EC4D20DDD81600AA61AD /* BluebirdChallenge.xcdatamodeld in Sources */,
 				5365EC7220DDDCF500AA61AD /* NetworkDispatcher.swift in Sources */,
 				5365EC7420DDDD2B00AA61AD /* NetworkEnvironment.swift in Sources */,

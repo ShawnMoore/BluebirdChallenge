@@ -20,10 +20,22 @@ protocol NetworkEnvironment {
     var host: String { get }
     
     /// A dictionary containing general HTTP header fields for the network environment. Defaults to empty dictionary.
-    var headers: [String: String] { get set }
+    var headers: [String: String] { get }
     
-    /// Boolean flag declaring if the environment requires authentication.
+    /// Boolean flag declaring if the environment requires authentication. Defaults to false.
     var requiresAuthentication: Bool { get }
+}
+
+// MARK: - Default Properties
+
+extension NetworkEnvironment {
+    var headers: [String: String] {
+        return [:]
+    }
+    
+    var requiresAuthentication: Bool {
+        return false
+    }
 }
 
 // MARK: - URL Creation
