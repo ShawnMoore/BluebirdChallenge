@@ -16,7 +16,7 @@ enum MovieRequest: NetworkRequest {
     }
     
     var path: String {
-        return "search/movie​"
+        return "search/movie"
     }
     
     var queryItems: [URLQueryItem] {
@@ -24,7 +24,7 @@ enum MovieRequest: NetworkRequest {
         case .search(let query):
             return [
                 URLQueryItem(name: "query", value: query),
-                URLQueryItem(name: "api-key", value: "2a61185ef6a27f400fd92820ad9e8537")
+                URLQueryItem(name: "api_key", value: "8b18aa7476c4157d2b675b90d6049c9d")
             ]
         }
     }
