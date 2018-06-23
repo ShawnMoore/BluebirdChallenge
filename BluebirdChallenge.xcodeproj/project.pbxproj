@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5365EC4520DDD81500AA61AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC4420DDD81500AA61AD /* AppDelegate.swift */; };
+		5365EC4720DDD81500AA61AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC4620DDD81500AA61AD /* ViewController.swift */; };
+		5365EC4A20DDD81600AA61AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5365EC4820DDD81600AA61AD /* Main.storyboard */; };
+		5365EC4D20DDD81600AA61AD /* BluebirdChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC4B20DDD81600AA61AD /* BluebirdChallenge.xcdatamodeld */; };
+		5365EC4F20DDD81600AA61AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5365EC4E20DDD81600AA61AD /* Assets.xcassets */; };
+		5365EC5220DDD81600AA61AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5365EC5020DDD81600AA61AD /* LaunchScreen.storyboard */; };
+		5365EC5D20DDD81600AA61AD /* BluebirdChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC5C20DDD81600AA61AD /* BluebirdChallengeTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5365EC5920DDD81600AA61AD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5365EC3920DDD81500AA61AD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5365EC4020DDD81500AA61AD;
+			remoteInfo = BluebirdChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5365EC4120DDD81500AA61AD /* BluebirdChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluebirdChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5365EC4420DDD81500AA61AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5365EC4620DDD81500AA61AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5365EC4920DDD81600AA61AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5365EC4C20DDD81600AA61AD /* BluebirdChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BluebirdChallenge.xcdatamodel; sourceTree = "<group>"; };
+		5365EC4E20DDD81600AA61AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5365EC5120DDD81600AA61AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5365EC5320DDD81600AA61AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5365EC5820DDD81600AA61AD /* BluebirdChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluebirdChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5365EC5C20DDD81600AA61AD /* BluebirdChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluebirdChallengeTests.swift; sourceTree = "<group>"; };
+		5365EC5E20DDD81600AA61AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5365EC3E20DDD81500AA61AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5365EC5520DDD81600AA61AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5365EC3820DDD81500AA61AD = {
+			isa = PBXGroup;
+			children = (
+				5365EC4320DDD81500AA61AD /* BluebirdChallenge */,
+				5365EC5B20DDD81600AA61AD /* BluebirdChallengeTests */,
+				5365EC4220DDD81500AA61AD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5365EC4220DDD81500AA61AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5365EC4120DDD81500AA61AD /* BluebirdChallenge.app */,
+				5365EC5820DDD81600AA61AD /* BluebirdChallengeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5365EC4320DDD81500AA61AD /* BluebirdChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				5365EC4420DDD81500AA61AD /* AppDelegate.swift */,
+				5365EC4620DDD81500AA61AD /* ViewController.swift */,
+				5365EC4820DDD81600AA61AD /* Main.storyboard */,
+				5365EC4E20DDD81600AA61AD /* Assets.xcassets */,
+				5365EC5020DDD81600AA61AD /* LaunchScreen.storyboard */,
+				5365EC5320DDD81600AA61AD /* Info.plist */,
+				5365EC4B20DDD81600AA61AD /* BluebirdChallenge.xcdatamodeld */,
+			);
+			path = BluebirdChallenge;
+			sourceTree = "<group>";
+		};
+		5365EC5B20DDD81600AA61AD /* BluebirdChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				5365EC5C20DDD81600AA61AD /* BluebirdChallengeTests.swift */,
+				5365EC5E20DDD81600AA61AD /* Info.plist */,
+			);
+			path = BluebirdChallengeTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5365EC4020DDD81500AA61AD /* BluebirdChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5365EC6120DDD81600AA61AD /* Build configuration list for PBXNativeTarget "BluebirdChallenge" */;
+			buildPhases = (
+				5365EC3D20DDD81500AA61AD /* Sources */,
+				5365EC3E20DDD81500AA61AD /* Frameworks */,
+				5365EC3F20DDD81500AA61AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BluebirdChallenge;
+			productName = BluebirdChallenge;
+			productReference = 5365EC4120DDD81500AA61AD /* BluebirdChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5365EC5720DDD81600AA61AD /* BluebirdChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5365EC6420DDD81600AA61AD /* Build configuration list for PBXNativeTarget "BluebirdChallengeTests" */;
+			buildPhases = (
+				5365EC5420DDD81600AA61AD /* Sources */,
+				5365EC5520DDD81600AA61AD /* Frameworks */,
+				5365EC5620DDD81600AA61AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5365EC5A20DDD81600AA61AD /* PBXTargetDependency */,
+			);
+			name = BluebirdChallengeTests;
+			productName = BluebirdChallengeTests;
+			productReference = 5365EC5820DDD81600AA61AD /* BluebirdChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5365EC3920DDD81500AA61AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Shawn Moore";
+				TargetAttributes = {
+					5365EC4020DDD81500AA61AD = {
+						CreatedOnToolsVersion = 9.4;
+					};
+					5365EC5720DDD81600AA61AD = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = 5365EC4020DDD81500AA61AD;
+					};
+				};
+			};
+			buildConfigurationList = 5365EC3C20DDD81500AA61AD /* Build configuration list for PBXProject "BluebirdChallenge" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5365EC3820DDD81500AA61AD;
+			productRefGroup = 5365EC4220DDD81500AA61AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5365EC4020DDD81500AA61AD /* BluebirdChallenge */,
+				5365EC5720DDD81600AA61AD /* BluebirdChallengeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5365EC3F20DDD81500AA61AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5365EC5220DDD81600AA61AD /* LaunchScreen.storyboard in Resources */,
+				5365EC4F20DDD81600AA61AD /* Assets.xcassets in Resources */,
+				5365EC4A20DDD81600AA61AD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5365EC5620DDD81600AA61AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5365EC3D20DDD81500AA61AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5365EC4720DDD81500AA61AD /* ViewController.swift in Sources */,
+				5365EC4D20DDD81600AA61AD /* BluebirdChallenge.xcdatamodeld in Sources */,
+				5365EC4520DDD81500AA61AD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5365EC5420DDD81600AA61AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5365EC5D20DDD81600AA61AD /* BluebirdChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5365EC5A20DDD81600AA61AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5365EC4020DDD81500AA61AD /* BluebirdChallenge */;
+			targetProxy = 5365EC5920DDD81600AA61AD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5365EC4820DDD81600AA61AD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5365EC4920DDD81600AA61AD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5365EC5020DDD81600AA61AD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5365EC5120DDD81600AA61AD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5365EC5F20DDD81600AA61AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5365EC6020DDD81600AA61AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5365EC6220DDD81600AA61AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59B8VY99KD;
+				INFOPLIST_FILE = BluebirdChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.shawnmoore.BluebirdChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5365EC6320DDD81600AA61AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59B8VY99KD;
+				INFOPLIST_FILE = BluebirdChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.shawnmoore.BluebirdChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5365EC6520DDD81600AA61AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59B8VY99KD;
+				INFOPLIST_FILE = BluebirdChallengeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.shawnmoore.BluebirdChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BluebirdChallenge.app/BluebirdChallenge";
+			};
+			name = Debug;
+		};
+		5365EC6620DDD81600AA61AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 59B8VY99KD;
+				INFOPLIST_FILE = BluebirdChallengeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.shawnmoore.BluebirdChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BluebirdChallenge.app/BluebirdChallenge";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5365EC3C20DDD81500AA61AD /* Build configuration list for PBXProject "BluebirdChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5365EC5F20DDD81600AA61AD /* Debug */,
+				5365EC6020DDD81600AA61AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5365EC6120DDD81600AA61AD /* Build configuration list for PBXNativeTarget "BluebirdChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5365EC6220DDD81600AA61AD /* Debug */,
+				5365EC6320DDD81600AA61AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5365EC6420DDD81600AA61AD /* Build configuration list for PBXNativeTarget "BluebirdChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5365EC6520DDD81600AA61AD /* Debug */,
+				5365EC6620DDD81600AA61AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5365EC4B20DDD81600AA61AD /* BluebirdChallenge.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5365EC4C20DDD81600AA61AD /* BluebirdChallenge.xcdatamodel */,
+			);
+			currentVersion = 5365EC4C20DDD81600AA61AD /* BluebirdChallenge.xcdatamodel */;
+			path = BluebirdChallenge.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5365EC3920DDD81500AA61AD /* Project object */;
+}
