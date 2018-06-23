@@ -79,10 +79,16 @@ extension NetworkDispatcher {
                 return
             }
             
-            let object = try? decoder.decode(T.self, from: data)
-            
-            completionQueue.async {
-                completionHandler(request, object, response, error)
+            do {
+                let object = try decoder.decode(T.self, from: data)
+                
+                completionQueue.async {
+                    completionHandler(request, object, response, error)
+                }
+            } catch let error {
+                completionQueue.async {
+                    completionHandler(request, nil, response, NetworkingError.decodingError(error))
+                }
             }
         }
     }

@@ -16,4 +16,5 @@ enum NetworkingError: LocalizedError {
     case unacceptableStatusCode(Int)
     case missingData
     case missingJSON
+    case decodingError(Error)
 }

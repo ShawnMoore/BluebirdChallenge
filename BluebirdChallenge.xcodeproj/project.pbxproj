@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5309BEEE20DEDDBD00097EAA /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5309BEED20DEDDBD00097EAA /* MovieResponse.swift */; };
 		5365EC4520DDD81500AA61AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC4420DDD81500AA61AD /* AppDelegate.swift */; };
 		5365EC4720DDD81500AA61AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC4620DDD81500AA61AD /* ViewController.swift */; };
 		5365EC4A20DDD81600AA61AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5365EC4820DDD81600AA61AD /* Main.storyboard */; };
@@ -23,6 +24,9 @@
 		5365EC7C20DDE78300AA61AD /* MovieRequet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC7B20DDE78300AA61AD /* MovieRequet.swift */; };
 		5365EC7E20DDE79C00AA61AD /* ImageRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC7D20DDE79C00AA61AD /* ImageRequest.swift */; };
 		5365EC8120DEC40600AA61AD /* URLSessionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC8020DEC40600AA61AD /* URLSessionDispatcher.swift */; };
+		5365EC8420DEDB2A00AA61AD /* MovieListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC8320DEDB2A00AA61AD /* MovieListResponse.swift */; };
+		53819F9920DEF0640018522F /* DateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53819F9820DEF0640018522F /* DateUtility.swift */; };
+		53819F9B20DEF1EB0018522F /* JSONDecoderUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53819F9A20DEF1EB0018522F /* JSONDecoderUtility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5309BEED20DEDDBD00097EAA /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 		5365EC4120DDD81500AA61AD /* BluebirdChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluebirdChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5365EC4420DDD81500AA61AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5365EC4620DDD81500AA61AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +61,9 @@
 		5365EC7B20DDE78300AA61AD /* MovieRequet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRequet.swift; sourceTree = "<group>"; };
 		5365EC7D20DDE79C00AA61AD /* ImageRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRequest.swift; sourceTree = "<group>"; };
 		5365EC8020DEC40600AA61AD /* URLSessionDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDispatcher.swift; sourceTree = "<group>"; };
+		5365EC8320DEDB2A00AA61AD /* MovieListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListResponse.swift; sourceTree = "<group>"; };
+		53819F9820DEF0640018522F /* DateUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtility.swift; sourceTree = "<group>"; };
+		53819F9A20DEF1EB0018522F /* JSONDecoderUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderUtility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,7 @@
 				5365EC6A20DDD9F700AA61AD /* Network Layer */,
 				5365EC6720DDD85500AA61AD /* Model */,
 				5365EC6C20DDDA4000AA61AD /* Extensions */,
+				53819F9720DEF0180018522F /* Helper */,
 				5365EC6820DDD8F300AA61AD /* Miscellaneous */,
 			);
 			path = BluebirdChallenge;
@@ -120,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				5365EC4B20DDD81600AA61AD /* BluebirdChallenge.xcdatamodeld */,
+				5365EC8220DEDAAC00AA61AD /* Value Objects */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,6 +198,24 @@
 				5365EC8020DEC40600AA61AD /* URLSessionDispatcher.swift */,
 			);
 			path = Dispatcher;
+			sourceTree = "<group>";
+		};
+		5365EC8220DEDAAC00AA61AD /* Value Objects */ = {
+			isa = PBXGroup;
+			children = (
+				5365EC8320DEDB2A00AA61AD /* MovieListResponse.swift */,
+				5309BEED20DEDDBD00097EAA /* MovieResponse.swift */,
+			);
+			path = "Value Objects";
+			sourceTree = "<group>";
+		};
+		53819F9720DEF0180018522F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				53819F9820DEF0640018522F /* DateUtility.swift */,
+				53819F9A20DEF1EB0018522F /* JSONDecoderUtility.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,14 +319,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5365EC8420DEDB2A00AA61AD /* MovieListResponse.swift in Sources */,
 				5365EC7620DDDDA600AA61AD /* NetworkRequest.swift in Sources */,
 				5365EC7E20DDE79C00AA61AD /* ImageRequest.swift in Sources */,
 				5365EC7820DDE09300AA61AD /* NetworkError.swift in Sources */,
 				5365EC7C20DDE78300AA61AD /* MovieRequet.swift in Sources */,
 				5365EC4720DDD81500AA61AD /* ViewController.swift in Sources */,
 				5365EC7020DDDB6800AA61AD /* URLRequestExtensions.swift in Sources */,
+				53819F9B20DEF1EB0018522F /* JSONDecoderUtility.swift in Sources */,
+				5309BEEE20DEDDBD00097EAA /* MovieResponse.swift in Sources */,
 				5365EC7A20DDE62300AA61AD /* MovieDBEnvironment.swift in Sources */,
 				5365EC4D20DDD81600AA61AD /* BluebirdChallenge.xcdatamodeld in Sources */,
+				53819F9920DEF0640018522F /* DateUtility.swift in Sources */,
 				5365EC7220DDDCF500AA61AD /* NetworkDispatcher.swift in Sources */,
 				5365EC7420DDDD2B00AA61AD /* NetworkEnvironment.swift in Sources */,
 				5365EC4520DDD81500AA61AD /* AppDelegate.swift in Sources */,
