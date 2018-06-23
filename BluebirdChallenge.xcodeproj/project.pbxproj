@@ -28,6 +28,10 @@
 		53819F9920DEF0640018522F /* DateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53819F9820DEF0640018522F /* DateUtility.swift */; };
 		53819F9B20DEF1EB0018522F /* JSONDecoderUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53819F9A20DEF1EB0018522F /* JSONDecoderUtility.swift */; };
 		53819F9D20DEFCEC0018522F /* GenreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53819F9C20DEFCEC0018522F /* GenreResponse.swift */; };
+		53819FA320DF03DD0018522F /* Genre+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53819F9F20DF03DD0018522F /* Genre+CoreDataClass.swift */; };
+		53819FA420DF03DD0018522F /* Genre+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53819FA020DF03DD0018522F /* Genre+CoreDataProperties.swift */; };
+		53819FA520DF03DD0018522F /* SearchItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53819FA120DF03DD0018522F /* SearchItem+CoreDataClass.swift */; };
+		53819FA620DF03DD0018522F /* SearchItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53819FA220DF03DD0018522F /* SearchItem+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,10 @@
 		53819F9820DEF0640018522F /* DateUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtility.swift; sourceTree = "<group>"; };
 		53819F9A20DEF1EB0018522F /* JSONDecoderUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoderUtility.swift; sourceTree = "<group>"; };
 		53819F9C20DEFCEC0018522F /* GenreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreResponse.swift; sourceTree = "<group>"; };
+		53819F9F20DF03DD0018522F /* Genre+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Genre+CoreDataClass.swift"; sourceTree = "<group>"; };
+		53819FA020DF03DD0018522F /* Genre+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Genre+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		53819FA120DF03DD0018522F /* SearchItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		53819FA220DF03DD0018522F /* SearchItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				5365EC4B20DDD81600AA61AD /* BluebirdChallenge.xcdatamodeld */,
+				53819F9E20DF02250018522F /* Model Objects */,
 				5365EC8220DEDAAC00AA61AD /* Value Objects */,
 			);
 			path = Model;
@@ -219,6 +228,17 @@
 				53819F9A20DEF1EB0018522F /* JSONDecoderUtility.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		53819F9E20DF02250018522F /* Model Objects */ = {
+			isa = PBXGroup;
+			children = (
+				53819F9F20DF03DD0018522F /* Genre+CoreDataClass.swift */,
+				53819FA020DF03DD0018522F /* Genre+CoreDataProperties.swift */,
+				53819FA120DF03DD0018522F /* SearchItem+CoreDataClass.swift */,
+				53819FA220DF03DD0018522F /* SearchItem+CoreDataProperties.swift */,
+			);
+			path = "Model Objects";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +348,7 @@
 				5365EC7820DDE09300AA61AD /* NetworkError.swift in Sources */,
 				5365EC7C20DDE78300AA61AD /* MovieRequet.swift in Sources */,
 				5365EC4720DDD81500AA61AD /* ViewController.swift in Sources */,
+				53819FA520DF03DD0018522F /* SearchItem+CoreDataClass.swift in Sources */,
 				5365EC7020DDDB6800AA61AD /* URLRequestExtensions.swift in Sources */,
 				53819F9B20DEF1EB0018522F /* JSONDecoderUtility.swift in Sources */,
 				5309BEEE20DEDDBD00097EAA /* MovieResponse.swift in Sources */,
@@ -339,6 +360,9 @@
 				5365EC7420DDDD2B00AA61AD /* NetworkEnvironment.swift in Sources */,
 				5365EC4520DDD81500AA61AD /* AppDelegate.swift in Sources */,
 				5365EC8120DEC40600AA61AD /* URLSessionDispatcher.swift in Sources */,
+				53819FA420DF03DD0018522F /* Genre+CoreDataProperties.swift in Sources */,
+				53819FA320DF03DD0018522F /* Genre+CoreDataClass.swift in Sources */,
+				53819FA620DF03DD0018522F /* SearchItem+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
