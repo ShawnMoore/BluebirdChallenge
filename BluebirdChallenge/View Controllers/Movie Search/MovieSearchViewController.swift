@@ -30,6 +30,7 @@ class MovieSearchViewController: UIViewController {
         self.navigationItem.hidesSearchBarWhenScrolling = false
         self.definesPresentationContext = true
         
+        self.recentSearches = Array(SearchItem.retrieveLatest().prefix(10))
         self.tableView?.prefetchDataSource = self
     }
 
@@ -48,6 +49,36 @@ class MovieSearchViewController: UIViewController {
         destination.movie = movie
     }
 
+    // MARK: - Helper functions
+    fileprivate func tableView(_ tableView: UITableView, movieCellForRowAt indexPath: IndexPath) -> MovieTableViewCell? {
+        guard let movie = viewModel?.movies[indexPath.row] else {
+            return nil
+        }
+        
+        guard let posterPath = movie.posterPath else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "movieWithoutPosterCell", for: indexPath) as? MovieTableViewCell
+            
+            return cell?.configure(from: movie)
+        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as? MovieTableViewCell
+        
+        ImageRequest.retrieveImage(path: posterPath).execute(in: MovieDBEnvironment.imageSearch, with: URLSessionDispatcher.shared) { (_, data, _, _) in
+            guard let data = data else {
+                return
+            }
+            
+            cell?.posterImageView?.image = UIImage(data: data)
+        }
+        
+        return cell?.configure(from: movie)
+    }
+    
+    fileprivate func clearViewModel() {
+        viewModel = nil
+        self.recentSearches = Array(SearchItem.retrieveLatest().prefix(10))
+        tableView?.reloadData()
+    }
 }
 
 // MARK: - UITableViewDelegate & UITableViewDataSource
@@ -61,26 +92,13 @@ extension MovieSearchViewController: UITableViewDelegate & UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let movie = viewModel?.movies[indexPath.row] else {
-            return UITableViewCell()
-        }
-
-        if let posterPath =  movie.posterPath {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as? MovieTableViewCell
-            
-            ImageRequest.retrieveImage(path: posterPath).execute(in: MovieDBEnvironment.imageSearch, with: URLSessionDispatcher.shared) { (_, data, _, _) in
-                guard let data = data else {
-                    return
-                }
-                
-                cell?.posterImageView?.image = UIImage(data: data)
-            }
-            
-            return cell?.configure(from: movie) ?? UITableViewCell()
+        if let viewModel = viewModel, !viewModel.movies.isEmpty {
+            return self.tableView(tableView, movieCellForRowAt: indexPath) ?? UITableViewCell()
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "movieWithoutPosterCell", for: indexPath) as? MovieTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Recent Search", for: indexPath) as? TextTableViewCell
+            cell?.contentLabel?.text = self.recentSearches[safe: indexPath.row]?.text
             
-            return cell?.configure(from: movie) ?? UITableViewCell()
+            return cell ?? UITableViewCell()
         }
     }
     
@@ -105,7 +123,11 @@ extension MovieSearchViewController: UITableViewDelegate & UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 141.0
+        if let viewModel = viewModel, !viewModel.movies.isEmpty {
+            return 141.0
+        } else {
+            return 44.0
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -125,9 +147,18 @@ extension MovieSearchViewController: UITableViewDelegate & UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "showDetail", sender: self)
+        defer {
+            tableView.deselectRow(at: indexPath, animated: false)
+        }
         
-        tableView.deselectRow(at: indexPath, animated: false)
+        guard let viewModel = viewModel, !viewModel.movies.isEmpty else {
+            searchController.searchBar.text = recentSearches[indexPath.row].text
+            searchController.isActive = true
+            
+            return
+        }
+        
+        performSegue(withIdentifier: "showDetail", sender: self)
     }
 }
 
@@ -147,13 +178,14 @@ extension MovieSearchViewController: UITableViewDataSourcePrefetching {
 extension MovieSearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard searchController.isActive, let text = searchController.searchBar.text, !text.isEmpty else {
-            viewModel = nil
-            tableView?.reloadData()
+            clearViewModel()
             return
         }
         
         self.viewModel = MovieListViewModel(with: text)
         self.viewModel?.delegate = self
+        
+        _ = SearchItem(text: text)
     }
 }
 

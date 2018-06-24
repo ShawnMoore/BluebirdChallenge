@@ -70,7 +70,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="contentLabel" destination="Ntb-g5-gzT" id="TV5-UF-g77"/>
-                                            <outlet property="topicLabel" destination="Ntb-g5-gzT" id="7Sq-b8-TDU"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="141" id="g8K-gU-mpT" customClass="MovieTableViewCell" customModule="BluebirdChallenge" customModuleProvider="target">

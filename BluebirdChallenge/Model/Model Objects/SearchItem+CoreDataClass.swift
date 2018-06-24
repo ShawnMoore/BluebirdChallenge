@@ -7,7 +7,7 @@
 //
 //
 
-import Foundation
+import UIKit
 import CoreData
 
 @objc(SearchItem)
@@ -21,10 +21,28 @@ public class SearchItem: NSManagedObject {
         }
     }
     
-    convenience init?(context: NSManagedObjectContext, text: String, occurredDate: Date) {
+    convenience init?(context: NSManagedObjectContext? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext, text: String, occurredDate: Date = Date()) {
+        guard let context = context else {
+            return nil
+        }
+        
         self.init(entity: type(of: self).entity(), insertInto: context)
         
         self.text = text
         self.occurredDate = occurredDate
+    }
+    
+    static func retrieveLatest(in context: NSManagedObjectContext? = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext) -> [SearchItem] {
+        guard let context = context else {
+            return []
+        }
+        
+        do {
+            let request: NSFetchRequest<SearchItem> = SearchItem.fetchRequest()
+            request.sortDescriptors = [NSSortDescriptor(key: #keyPath(SearchItem.rawOccurredDate), ascending: false)]
+            return try context.fetch(request)
+        } catch {
+            return []
+        }
     }
 }
