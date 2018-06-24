@@ -14,6 +14,7 @@ class URLSessionDispatcher: NetworkDispatcher {
     
     // MARK: - Properties
     fileprivate var currentRequests: [String: URLSessionDataTask] = [:]
+    fileprivate var cache = NSCache<NSURL, NSData>()
     fileprivate let session: URLSession
     
     let backgroundQueue: DispatchQueue = {
@@ -63,6 +64,14 @@ class URLSessionDispatcher: NetworkDispatcher {
                 return
             }
             
+            if let url = urlRequest.url as NSURL?, let cachedData = self.cache.object(forKey: url) {
+                completionQueue.async {
+                    completionHandler(urlRequest, cachedData as Data, nil, nil)
+                }
+                
+                return
+            }
+            
             let setHeaderValuefunction = { (field: String, value: String) in
                 urlRequest.setValue(value, forHTTPHeaderField: field)
             }
@@ -105,6 +114,10 @@ class URLSessionDispatcher: NetworkDispatcher {
                     }
                     
                     return
+                }
+                
+                if let data = data as NSData?,let url = urlRequest.url as NSURL? {
+                    self.cache.setObject(data, forKey: url)
                 }
                 
                 completionQueue.async {
