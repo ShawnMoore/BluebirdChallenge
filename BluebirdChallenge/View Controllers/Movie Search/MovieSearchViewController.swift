@@ -29,6 +29,8 @@ class MovieSearchViewController: UIViewController {
         self.navigationItem.searchController = searchController
         self.navigationItem.hidesSearchBarWhenScrolling = false
         self.definesPresentationContext = true
+        
+        self.tableView?.prefetchDataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +38,6 @@ class MovieSearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
@@ -64,14 +65,23 @@ extension MovieSearchViewController: UITableViewDelegate & UITableViewDataSource
             return UITableViewCell()
         }
 
-        let cell: MovieTableViewCell?
-        if movie.posterPath != nil {
-            cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as? MovieTableViewCell
+        if let posterPath =  movie.posterPath {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as? MovieTableViewCell
+            
+            ImageRequest.retrieveImage(path: posterPath).execute(in: MovieDBEnvironment.imageSearch, with: URLSessionDispatcher.shared) { (_, data, _, _) in
+                guard let data = data else {
+                    return
+                }
+                
+                cell?.posterImageView?.image = UIImage(data: data)
+            }
+            
+            return cell?.configure(from: movie) ?? UITableViewCell()
         } else {
-            cell = tableView.dequeueReusableCell(withIdentifier: "movieWithoutPosterCell", for: indexPath) as? MovieTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "movieWithoutPosterCell", for: indexPath) as? MovieTableViewCell
+            
+            return cell?.configure(from: movie) ?? UITableViewCell()
         }
-        
-        return cell?.configure(from: movie) ?? UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -112,6 +122,18 @@ extension MovieSearchViewController: UITableViewDelegate & UITableViewDataSource
         }
         
         viewModel.retrieveNextPage()
+    }
+}
+
+// MARK: - UITableViewDataSourcePrefetching
+extension MovieSearchViewController: UITableViewDataSourcePrefetching {
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        let posterPathes = indexPaths.compactMap({ viewModel?.movies[safe: $0.row]?.posterPath })
+        
+        for path in posterPathes {
+            // Execute request to cache image data
+            ImageRequest.retrieveImage(path: path).execute(in: MovieDBEnvironment.imageSearch, with: URLSessionDispatcher.shared, completionHandler: { _,_,_,_  in })
+        }
     }
 }
 

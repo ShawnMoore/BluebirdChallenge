@@ -11,6 +11,7 @@
 		531A017320DF323F00CABB15 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531A017220DF323F00CABB15 /* TextTableViewCell.swift */; };
 		531A017520DF40C400CABB15 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531A017420DF40C400CABB15 /* MovieTableViewCell.swift */; };
 		531A017720DF42D100CABB15 /* LoadingIndicatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531A017620DF42D100CABB15 /* LoadingIndicatorTableViewCell.swift */; };
+		531A017920DF5EC800CABB15 /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531A017820DF5EC800CABB15 /* ArrayExtensions.swift */; };
 		5365EC4520DDD81500AA61AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC4420DDD81500AA61AD /* AppDelegate.swift */; };
 		5365EC4A20DDD81600AA61AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5365EC4820DDD81600AA61AD /* Main.storyboard */; };
 		5365EC4D20DDD81600AA61AD /* BluebirdChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC4B20DDD81600AA61AD /* BluebirdChallenge.xcdatamodeld */; };
@@ -54,6 +55,7 @@
 		531A017220DF323F00CABB15 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
 		531A017420DF40C400CABB15 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		531A017620DF42D100CABB15 /* LoadingIndicatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorTableViewCell.swift; sourceTree = "<group>"; };
+		531A017820DF5EC800CABB15 /* ArrayExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		5365EC4120DDD81500AA61AD /* BluebirdChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluebirdChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5365EC4420DDD81500AA61AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5365EC4920DDD81600AA61AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				5365EC6F20DDDB6800AA61AD /* URLRequestExtensions.swift */,
+				531A017820DF5EC800CABB15 /* ArrayExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				53819FA420DF03DD0018522F /* Genre+CoreDataProperties.swift in Sources */,
 				53819FA320DF03DD0018522F /* Genre+CoreDataClass.swift in Sources */,
 				53819FAD20DF0A9E0018522F /* MovieDetailViewController.swift in Sources */,
+				531A017920DF5EC800CABB15 /* ArrayExtensions.swift in Sources */,
 				53819FA620DF03DD0018522F /* SearchItem+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
