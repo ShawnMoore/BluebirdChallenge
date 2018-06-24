@@ -38,15 +38,15 @@ class MovieSearchViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        guard let destination = segue.destination as? MovieDetailViewController,
+              let indexPath = tableView?.indexPathForSelectedRow,
+              let movie = viewModel?.movies[safe: indexPath.row] else {
+            return
+        }
+        
+        destination.movie = movie
     }
-    */
 
 }
 
@@ -122,6 +122,12 @@ extension MovieSearchViewController: UITableViewDelegate & UITableViewDataSource
         }
         
         viewModel.retrieveNextPage()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetail", sender: self)
+        
+        tableView.deselectRow(at: indexPath, animated: false)
     }
 }
 
