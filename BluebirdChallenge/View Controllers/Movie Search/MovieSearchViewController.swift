@@ -74,8 +74,36 @@ extension MovieSearchViewController: UITableViewDelegate & UITableViewDataSource
         return cell?.configure(from: movie) ?? UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableCell(withIdentifier: "Section Header") as? TextTableViewCell
+        
+        if let viewModel = viewModel, !viewModel.movies.isEmpty {
+            header?.contentLabel?.text = "Movies"
+        } else {
+            header?.contentLabel?.text = "Past Searches"
+        }
+        
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        guard let viewModel = viewModel, !viewModel.retrievedAllPages else {
+            return UIView()
+        }
+        
+        return tableView.dequeueReusableCell(withIdentifier: "loadingCell")
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 141.0
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 52.0
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 60.0
     }
 }
 

@@ -19,12 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EdV-re-uq9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="EdV-re-uq9">
                                 <rect key="frame" x="0.0" y="116" width="375" height="551"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Section Header" rowHeight="55" id="RYK-AY-zMc" customClass="TextTableViewCell" customModule="BluebirdChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="55"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RYK-AY-zMc" id="WFt-dP-H0f">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="54.5"/>
@@ -49,7 +49,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Recent Search" id="d6g-Wu-YYr" customClass="TextTableViewCell" customModule="BluebirdChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="83" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="110.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d6g-Wu-YYr" id="aC7-tl-Lgr">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -74,7 +74,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="141" id="g8K-gU-mpT" customClass="MovieTableViewCell" customModule="BluebirdChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="127" width="375" height="141"/>
+                                        <rect key="frame" x="0.0" y="154.5" width="375" height="141"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g8K-gU-mpT" id="Qqs-1z-SVg">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="140.5"/>
@@ -120,7 +120,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="movieWithoutPosterCell" rowHeight="141" id="vpd-sP-Gcn" customClass="MovieTableViewCell" customModule="BluebirdChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="268" width="375" height="141"/>
+                                        <rect key="frame" x="0.0" y="295.5" width="375" height="141"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vpd-sP-Gcn" id="YmB-0b-Xzy">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="140.5"/>
@@ -155,7 +155,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="loadingCell" rowHeight="60" id="hTH-ws-CR7">
-                                        <rect key="frame" x="0.0" y="409" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="436.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hTH-ws-CR7" id="yzc-Pf-QU0">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
