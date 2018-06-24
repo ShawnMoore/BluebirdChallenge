@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5309BEEE20DEDDBD00097EAA /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5309BEED20DEDDBD00097EAA /* MovieResponse.swift */; };
 		5365EC4520DDD81500AA61AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC4420DDD81500AA61AD /* AppDelegate.swift */; };
-		5365EC4720DDD81500AA61AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC4620DDD81500AA61AD /* ViewController.swift */; };
 		5365EC4A20DDD81600AA61AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5365EC4820DDD81600AA61AD /* Main.storyboard */; };
 		5365EC4D20DDD81600AA61AD /* BluebirdChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC4B20DDD81600AA61AD /* BluebirdChallenge.xcdatamodeld */; };
 		5365EC4F20DDD81600AA61AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5365EC4E20DDD81600AA61AD /* Assets.xcassets */; };
@@ -32,6 +31,9 @@
 		53819FA420DF03DD0018522F /* Genre+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53819FA020DF03DD0018522F /* Genre+CoreDataProperties.swift */; };
 		53819FA520DF03DD0018522F /* SearchItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53819FA120DF03DD0018522F /* SearchItem+CoreDataClass.swift */; };
 		53819FA620DF03DD0018522F /* SearchItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53819FA220DF03DD0018522F /* SearchItem+CoreDataProperties.swift */; };
+		53819FAB20DF0A840018522F /* MovieSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53819FAA20DF0A840018522F /* MovieSearchViewController.swift */; };
+		53819FAD20DF0A9E0018522F /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53819FAC20DF0A9E0018522F /* MovieDetailViewController.swift */; };
+		53819FAF20DF13130018522F /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53819FAE20DF13130018522F /* MovieListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +50,6 @@
 		5309BEED20DEDDBD00097EAA /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 		5365EC4120DDD81500AA61AD /* BluebirdChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluebirdChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5365EC4420DDD81500AA61AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5365EC4620DDD81500AA61AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5365EC4920DDD81600AA61AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5365EC4C20DDD81600AA61AD /* BluebirdChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BluebirdChallenge.xcdatamodel; sourceTree = "<group>"; };
 		5365EC4E20DDD81600AA61AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +75,9 @@
 		53819FA020DF03DD0018522F /* Genre+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Genre+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		53819FA120DF03DD0018522F /* SearchItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		53819FA220DF03DD0018522F /* SearchItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		53819FAA20DF0A840018522F /* MovieSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchViewController.swift; sourceTree = "<group>"; };
+		53819FAC20DF0A9E0018522F /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		53819FAE20DF13130018522F /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +119,8 @@
 		5365EC4320DDD81500AA61AD /* BluebirdChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				5365EC4620DDD81500AA61AD /* ViewController.swift */,
 				5365EC4820DDD81600AA61AD /* Main.storyboard */,
+				53819FA720DF09910018522F /* View Controllers */,
 				5365EC6A20DDD9F700AA61AD /* Network Layer */,
 				5365EC6720DDD85500AA61AD /* Model */,
 				5365EC6C20DDDA4000AA61AD /* Extensions */,
@@ -139,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				5365EC4B20DDD81600AA61AD /* BluebirdChallenge.xcdatamodeld */,
+				53819FB020DF13190018522F /* View Models */,
 				53819F9E20DF02250018522F /* Model Objects */,
 				5365EC8220DEDAAC00AA61AD /* Value Objects */,
 			);
@@ -239,6 +244,39 @@
 				53819FA220DF03DD0018522F /* SearchItem+CoreDataProperties.swift */,
 			);
 			path = "Model Objects";
+			sourceTree = "<group>";
+		};
+		53819FA720DF09910018522F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				53819FA920DF09D70018522F /* Movie Search */,
+				53819FA820DF09CF0018522F /* Movie Detail */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		53819FA820DF09CF0018522F /* Movie Detail */ = {
+			isa = PBXGroup;
+			children = (
+				53819FAC20DF0A9E0018522F /* MovieDetailViewController.swift */,
+			);
+			path = "Movie Detail";
+			sourceTree = "<group>";
+		};
+		53819FA920DF09D70018522F /* Movie Search */ = {
+			isa = PBXGroup;
+			children = (
+				53819FAA20DF0A840018522F /* MovieSearchViewController.swift */,
+			);
+			path = "Movie Search";
+			sourceTree = "<group>";
+		};
+		53819FB020DF13190018522F /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				53819FAE20DF13130018522F /* MovieListViewModel.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,7 +385,7 @@
 				5365EC7E20DDE79C00AA61AD /* ImageRequest.swift in Sources */,
 				5365EC7820DDE09300AA61AD /* NetworkError.swift in Sources */,
 				5365EC7C20DDE78300AA61AD /* MovieRequet.swift in Sources */,
-				5365EC4720DDD81500AA61AD /* ViewController.swift in Sources */,
+				53819FAB20DF0A840018522F /* MovieSearchViewController.swift in Sources */,
 				53819FA520DF03DD0018522F /* SearchItem+CoreDataClass.swift in Sources */,
 				5365EC7020DDDB6800AA61AD /* URLRequestExtensions.swift in Sources */,
 				53819F9B20DEF1EB0018522F /* JSONDecoderUtility.swift in Sources */,
@@ -357,11 +395,13 @@
 				5365EC4D20DDD81600AA61AD /* BluebirdChallenge.xcdatamodeld in Sources */,
 				53819F9920DEF0640018522F /* DateUtility.swift in Sources */,
 				5365EC7220DDDCF500AA61AD /* NetworkDispatcher.swift in Sources */,
+				53819FAF20DF13130018522F /* MovieListViewModel.swift in Sources */,
 				5365EC7420DDDD2B00AA61AD /* NetworkEnvironment.swift in Sources */,
 				5365EC4520DDD81500AA61AD /* AppDelegate.swift in Sources */,
 				5365EC8120DEC40600AA61AD /* URLSessionDispatcher.swift in Sources */,
 				53819FA420DF03DD0018522F /* Genre+CoreDataProperties.swift in Sources */,
 				53819FA320DF03DD0018522F /* Genre+CoreDataClass.swift in Sources */,
+				53819FAD20DF0A9E0018522F /* MovieDetailViewController.swift in Sources */,
 				53819FA620DF03DD0018522F /* SearchItem+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
