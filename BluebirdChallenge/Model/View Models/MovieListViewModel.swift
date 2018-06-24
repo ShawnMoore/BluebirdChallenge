@@ -17,7 +17,7 @@ protocol MovieListViewModelDelegate: AnyObject {
 // MARK: - MovieListViewModel
 class MovieListViewModel {
     // MARK: - Properties
-    fileprivate(set) let query: String
+    let query: String
     
     fileprivate(set) var totalPages: Int = 0
     fileprivate(set) var totalMovies: Int = 0

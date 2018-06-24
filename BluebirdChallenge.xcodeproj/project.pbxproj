@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5309BEEE20DEDDBD00097EAA /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5309BEED20DEDDBD00097EAA /* MovieResponse.swift */; };
+		531A017320DF323F00CABB15 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531A017220DF323F00CABB15 /* TextTableViewCell.swift */; };
+		531A017520DF40C400CABB15 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531A017420DF40C400CABB15 /* MovieTableViewCell.swift */; };
+		531A017720DF42D100CABB15 /* LoadingIndicatorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531A017620DF42D100CABB15 /* LoadingIndicatorTableViewCell.swift */; };
 		5365EC4520DDD81500AA61AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC4420DDD81500AA61AD /* AppDelegate.swift */; };
 		5365EC4A20DDD81600AA61AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5365EC4820DDD81600AA61AD /* Main.storyboard */; };
 		5365EC4D20DDD81600AA61AD /* BluebirdChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5365EC4B20DDD81600AA61AD /* BluebirdChallenge.xcdatamodeld */; };
@@ -48,6 +51,9 @@
 
 /* Begin PBXFileReference section */
 		5309BEED20DEDDBD00097EAA /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
+		531A017220DF323F00CABB15 /* TextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		531A017420DF40C400CABB15 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		531A017620DF42D100CABB15 /* LoadingIndicatorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorTableViewCell.swift; sourceTree = "<group>"; };
 		5365EC4120DDD81500AA61AD /* BluebirdChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluebirdChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5365EC4420DDD81500AA61AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5365EC4920DDD81600AA61AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,6 +104,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		531A017120DF322400CABB15 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				531A017220DF323F00CABB15 /* TextTableViewCell.swift */,
+				531A017620DF42D100CABB15 /* LoadingIndicatorTableViewCell.swift */,
+				531A017420DF40C400CABB15 /* MovieTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		5365EC3820DDD81500AA61AD = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				53819FAA20DF0A840018522F /* MovieSearchViewController.swift */,
+				531A017120DF322400CABB15 /* Cells */,
 			);
 			path = "Movie Search";
 			sourceTree = "<group>";
@@ -385,6 +402,7 @@
 				5365EC7E20DDE79C00AA61AD /* ImageRequest.swift in Sources */,
 				5365EC7820DDE09300AA61AD /* NetworkError.swift in Sources */,
 				5365EC7C20DDE78300AA61AD /* MovieRequet.swift in Sources */,
+				531A017520DF40C400CABB15 /* MovieTableViewCell.swift in Sources */,
 				53819FAB20DF0A840018522F /* MovieSearchViewController.swift in Sources */,
 				53819FA520DF03DD0018522F /* SearchItem+CoreDataClass.swift in Sources */,
 				5365EC7020DDDB6800AA61AD /* URLRequestExtensions.swift in Sources */,
@@ -395,9 +413,11 @@
 				5365EC4D20DDD81600AA61AD /* BluebirdChallenge.xcdatamodeld in Sources */,
 				53819F9920DEF0640018522F /* DateUtility.swift in Sources */,
 				5365EC7220DDDCF500AA61AD /* NetworkDispatcher.swift in Sources */,
+				531A017720DF42D100CABB15 /* LoadingIndicatorTableViewCell.swift in Sources */,
 				53819FAF20DF13130018522F /* MovieListViewModel.swift in Sources */,
 				5365EC7420DDDD2B00AA61AD /* NetworkEnvironment.swift in Sources */,
 				5365EC4520DDD81500AA61AD /* AppDelegate.swift in Sources */,
+				531A017320DF323F00CABB15 /* TextTableViewCell.swift in Sources */,
 				5365EC8120DEC40600AA61AD /* URLSessionDispatcher.swift in Sources */,
 				53819FA420DF03DD0018522F /* Genre+CoreDataProperties.swift in Sources */,
 				53819FA320DF03DD0018522F /* Genre+CoreDataClass.swift in Sources */,

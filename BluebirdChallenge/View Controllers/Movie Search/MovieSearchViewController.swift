@@ -10,15 +10,25 @@ import UIKit
 
 class MovieSearchViewController: UIViewController {
 
-    @IBOutlet weak var LoadingView: UIView?
-    @IBOutlet weak var LoadingIndicator: UIActivityIndicatorView?
+    @IBOutlet weak var tableView: UITableView?
     
-    fileprivate(set) var movieList: [MovieListRespone] = []
+    fileprivate let searchController: UISearchController = {
+        let controller = UISearchController(searchResultsController: nil)
+        controller.obscuresBackgroundDuringPresentation = false
+        controller.searchBar.placeholder = "Movies..."
+        return controller
+    }()
+    
+    fileprivate var viewModel: MovieListViewModel?
+    fileprivate var recentSearches: [SearchItem] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        searchController.searchResultsUpdater = self
+        self.navigationItem.searchController = searchController
+        self.navigationItem.hidesSearchBarWhenScrolling = false
+        self.definesPresentationContext = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,14 +49,61 @@ class MovieSearchViewController: UIViewController {
 
 }
 
+// MARK: - UITableViewDelegate & UITableViewDataSource
 extension MovieSearchViewController: UITableViewDelegate & UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        guard let viewModel = viewModel, !viewModel.movies.isEmpty else {
+            return recentSearches.count
+        }
+        
+        return viewModel.movies.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        guard let movie = viewModel?.movies[indexPath.row] else {
+            return UITableViewCell()
+        }
+
+        let cell: MovieTableViewCell?
+        if movie.posterPath != nil {
+            cell = tableView.dequeueReusableCell(withIdentifier: "movieCell", for: indexPath) as? MovieTableViewCell
+        } else {
+            cell = tableView.dequeueReusableCell(withIdentifier: "movieWithoutPosterCell", for: indexPath) as? MovieTableViewCell
+        }
+        
+        return cell?.configure(from: movie) ?? UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 141.0
+    }
+}
+
+// MARK: - UISearchResultsUpdating
+extension MovieSearchViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard searchController.isActive, let text = searchController.searchBar.text, !text.isEmpty else {
+            viewModel = nil
+            tableView?.reloadData()
+            return
+        }
+        
+        self.viewModel = MovieListViewModel(with: text)
+        self.viewModel?.delegate = self
+    }
+}
+
+// MARK: - MovieListViewModelDelegate
+extension MovieSearchViewController: MovieListViewModelDelegate {
+    func load(error: Error) {
+        let alert = UIAlertController(title: "Oh No", message: "An error occured!", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
     
+    func hasUpdatedMovieList() {
+        tableView?.reloadData()
+    }
 }
