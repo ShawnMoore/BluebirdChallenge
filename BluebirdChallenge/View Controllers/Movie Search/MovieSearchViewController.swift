@@ -105,6 +105,14 @@ extension MovieSearchViewController: UITableViewDelegate & UITableViewDataSource
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 60.0
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let viewModel = viewModel, !viewModel.retrievedAllPages, !viewModel.movies.isEmpty, indexPath.row + 1 >= viewModel.movies.count else {
+            return
+        }
+        
+        viewModel.retrieveNextPage()
+    }
 }
 
 // MARK: - UISearchResultsUpdating

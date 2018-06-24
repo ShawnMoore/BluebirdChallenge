@@ -24,6 +24,9 @@ class MovieListViewModel {
     fileprivate(set) var movies: [MovieResponse] = []
     fileprivate(set) var retrievedPages: Set<Int> = []
     
+    fileprivate var environment: NetworkEnvironment
+    fileprivate var dispatcher: NetworkDispatcher
+    
     weak var delegate: MovieListViewModelDelegate?
     
     // MARK: - Computed Properties
@@ -34,8 +37,10 @@ class MovieListViewModel {
     // MARK: - Initializer
     init(with query: String, in environment: NetworkEnvironment = MovieDBEnvironment.movieSearch, with dispatcher: NetworkDispatcher = URLSessionDispatcher.shared) {
         self.query = query
+        self.environment = environment
+        self.dispatcher = dispatcher
         
-        MovieRequest.search(query: query).executeCodable(in: environment, with: dispatcher, decoder: JSONDecoder.Utility.dayOnlyDecoder) { [weak self] (request: URLRequest?, list: MovieListRespone?, response: URLResponse?, error: Error?) in
+        MovieRequest.search(query: query, page: 1).executeCodable(in: environment, with: dispatcher, decoder: JSONDecoder.Utility.dayOnlyDecoder) { [weak self] (request: URLRequest?, list: MovieListRespone?, response: URLResponse?, error: Error?) in
             
             guard let strongSelf = self else {
                 return
@@ -57,6 +62,32 @@ class MovieListViewModel {
     }
     
     // MARK: - Public API Functions
+    func retrieveNextPage() {
+        guard !retrievedAllPages, movies.count != totalMovies, let currentPage = retrievedPages.max() else {
+            return
+        }
+        
+        MovieRequest.search(query: query, page: currentPage + 1).executeCodable(in: environment, with: dispatcher, decoder: JSONDecoder.Utility.dayOnlyDecoder) { [weak self] (request: URLRequest?, list: MovieListRespone?, response: URLResponse?, error: Error?) in
+            
+            guard let strongSelf = self else {
+                return
+            }
+            
+            guard error == nil else {
+                strongSelf.delegate?.load(error: error!)
+                return
+            }
+            
+            guard let list = list else {
+                strongSelf.delegate?.load(error: NetworkingError.missingData)
+                return
+            }
+            
+            strongSelf.movies += list.movies
+            strongSelf.retrievedPages.insert(list.currentPage)
+            strongSelf.delegate?.hasUpdatedMovieList()
+        }
+    }
 }
 
 // MARK: - Fileprivate Helper Functions
